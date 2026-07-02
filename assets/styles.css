@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  font-family: Metamorphous, Tinos, serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+:root {
+  --primary-color: #239344;
+  --secondary-color: #fede39;
+  --tertiary-color: #7fad4a;
+}
+
+header {
+  background: var(--primary-color);
+  margin: 20px;
+  margin-top: 50px;
+  padding: 10px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+/* position: sticky;
+  top: 0;
+  z-index: 1000; */
+}
+
+#wpb-logo {
+  position: relative;
+  width: 200px;
+  right: 15px;
+  border-radius: 10;
+  padding: 5px
+}
+
+header h1 {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin: 5px;
+}
+
+.navbar .nav-link {
+  background: transparent;
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-left: 10px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+#hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  text-align: center;
+}
+section {
+  display: none;
+  padding: 30px;
+}
+
+section.active {
+  display: block;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--tertiary-color);
+  padding: 30px;
+}
+
+.home-secondary {
+  background-image: url('../assets/images/hadfield1.avif');
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+  padding: 30px;
+}
+
+
+#index-carousel #juniorlings-carousel {
+  margin-top: 30px;
+  width: 80%;
+  margin: auto;
+}
+
+/* Ensure all carousel images render at a consistent height */
+/* Make images fully visible (no cropping) while constraining height */
+.carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-item img {
+  max-width: 100%;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+/* joining page */
+#join {
+  background: var(--tertiary-color);
+  font-size: 1.2rem;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.available-courses, .available-assessments {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px;
+}
+
+/* juniorlings page */
+#juniorlings {
+  background: var(--tertiary-color);
+  font-size: 1.2rem;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+footer {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+#pix-logo {
+  width: 40px;
+  padding: 5px;
+}
+#socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.instagram-icon {
+  font-size: 40px;
+  color: var(--secondary-color);
+}
+.facebook-icon {
+  font-size: 40px;
+  color: var(--secondary-color);
+  margin: 0 20px;
+}
+.twitter-icon {
+  font-size: 40px;
+  color: var(--secondary-color);
+}
+/* Mobile */
+/* @media (max-width: 900px) {
+  #carousel { width: 100%; }
+  .carousel-item img { max-height: 240px; }
+}
+
+@media (max-width: 600px) {
+  .cards, .auth-container {
+    flex-direction: column;
+  }
+} */
