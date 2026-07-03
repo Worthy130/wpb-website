@@ -12,18 +12,17 @@
     </head>
     <body>
 
-    <header>
-      <img id="wpb-logo" src="assets/images/WPB LOGO 300px 2026.png"
-        alt="Winnington Park Bowmen Logo">
-      <h1>Winnington Park Bowmen</h1>
-      <nav id="navbar" class="navbar navbar-expand">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="join.html">Joining</a>
-        <a class="nav-link" href="juniors.html">Juniors</a>
-        <a class="nav-link" href="members-area.html">Members Area</a>
-      </nav>
-    </header>
-
+        <header>
+            <img id="wpb-logo" src="assets/images/WPB LOGO 300px 2026.png"
+                alt="Winnington Park Bowmen Logo">
+            <h1>Winnington Park Bowmen</h1>
+            <nav id="navbar" class="navbar navbar-expand">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="join.html">Joining</a>
+                <a class="nav-link" href="juniors.html">Juniors</a>
+                <a class="nav-link" href="members-area.html">Members Area</a>
+            </nav>
+        </header>
 
         <!-- See available courses and ask for an assessment -->
         <div id="join">
@@ -115,137 +114,87 @@
                     affordable monthly prices.</p>
             </div>
 
-            <div class="join-courses">
-                <row class="row">
-                    <div class="available-courses col-md-6">
-                        <h2>Available Courses</h2>
-                        <h5>For people new to archery</h5>
-                        <p>Become part of the community</p>
-                        <button
-                            onclick="location.href='secondary-pages/available-courses.html'">Lets
-                            have a look!</button>
+            <div class="container join-courses">
+                <div class="row g-4">
+                    <div class="col-6">
+                        <div class="available-courses">
+                            <h2>Available Courses</h2>
+                            <h5>For people new to archery</h5>
+                            <p>Become part of the community</p>
+                            <button
+                                onclick="location.href='secondary-pages/available-courses.html'">
+                                Let's have a look!
+                            </button>
+                        </div>
                     </div>
-                    <div class="available-assessments col-md-6">
-                        <h2>Ask for an Assessment</h2>
-                        <h5>For people experienced in archery</h5>
-                        <p>Become part of the community</p>
-                        <button
-                            onclick="location.href='secondary-pages/ask-for-assessment.html'">Lets
-                            have a look!</button>
+                    <div class="col-6">
+                        <div class="available-assessments">
+                            <h2>Ask for an Assessment</h2>
+                             <h5>For people experienced in archery</h5>
+                            <p>Become part of the community</p>
+                             <button
+                                onclick="location.href='secondary-pages/ask-for-assessment.html'">
+                                Let's have a look!
+                                </button>
+                        </div>
                     </div>
-                </row>
-            </div>
-        </div>
-
-        <!-- MEMBERSHIP -->
-        <!-- <section id="join">
-        <h2>Choose Membership</h2>
-        <div class="cards">
-
-          <div class="card">
-            <h3>Annual</h3>
-            <p>£50 / year</p>
-            <button onclick="selectPlan('annual')"
-              class="primary">Join</button>
-          </div>
-
-          <div class="card">
-            <h3>Monthly</h3>
-            <p>£5 / month</p>
-            <button onclick="selectPlan('monthly')"
-              class="primary">Join</button>
-          </div>
-
-        </div>
-      </section> -->
-
-        <!-- LOGIN / REGISTER -->
-        <!-- <section id="login">
-            <div class="auth-container">
-
-                <div>
-                    <h3>Login</h3>
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <button class="primary">Login</button>
-                </div>
-
-                <div>
-                    <h3>Register</h3>
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <button class="primary">Register</button>
-                </div>
-
-            </div>
-        </section> -->
-
-        <!-- DASHBOARD -->
-        <!-- <section id="dashboard">
-            <h2>Member Dashboard</h2>
-
-            <div class="card status active-status">
-                <h3>Status: Active</h3>
-                <p>Plan: Annual</p>
-                <p>Renews: 12 March 2027</p>
-            </div>
-
-            <div class="card status expired-status hidden">
-                <h3>Status: Expired</h3>
-                <button class="primary">Renew Membership</button>
-            </div>
-
-        </section> -->
-
-        <footer id="contact">
-            <div class="row">
-                <div class="col-md-4" id="copyright">
-                    <p><a href="https://www.pixelio.co.uk" target="_blank"
-                            rel="noopener"
-                            aria-label="Visit our website (opens in a new tab)"><img
-                                src="assets/images/Pixelio-blue-logo.png"
-                                alt="Go to pixelio website" class="img-fluid"
-                                id="pix-logo"></a>&copy; 2026 Pixelio. All
-                        rights
-                        reserved.</p>
-                </div>
-                <div class="col-md-4" id="contact-info">
-                    <address>
-                        <strong><i class="fa-solid fa-location-dot"></i>
-                            Winnington Park
-                            Bowmen</strong>
-                        <br>
-                        Moss Farm Leisure Complex,
-                        <br>
-                        Northwich, Cheshire, CW8 4BG
-                    </address>
-                </div>
-                <div class="col-md-4" id="socials">
-                    <a href="https://www.instagram.com" target="_blank"
-                        rel="noopener"
-                        aria-label="Visit our Instagram page (opens in a new tab)"><i
-                            class="fa-brands fa-instagram instagram-icon"></i></a>
-                    <a href="https://www.facebook.com" target="_blank"
-                        rel="noopener"
-                        aria-label="Visit our Facebook page (opens in a new tab)"><i
-                            class="fa-brands fa-square-facebook facebook-icon"></i></a>
-                    <a href="https://www.twitter.com" target="_blank"
-                        rel="noopener"
-                        aria-label="Visit our Twitter feed (opens in a new tab)"><i
-                            class="fa-brands fa-x-twitter twitter-icon"></i></a>
                 </div>
             </div>
-        </footer>
+                    <footer id="contact">
+                        <div class="row">
+                            <div class="col-md-4" id="copyright">
+                                <p><a href="https://www.pixelio.co.uk"
+                                        target="_blank"
+                                        rel="noopener"
+                                        aria-label="Visit our website (opens in a new tab)"><img
+                                            src="assets/images/Pixelio-blue-logo.png"
+                                            alt="Go to pixelio website"
+                                            class="img-fluid"
+                                            id="pix-logo"></a>&copy; 2026
+                                    Pixelio. All
+                                    rights
+                                    reserved.</p>
+                            </div>
+                            <div class="col-md-4" id="contact-info">
+                                <address>
+                                    <strong><i
+                                            class="fa-solid fa-location-dot"></i>
+                                        Winnington Park
+                                        Bowmen</strong>
+                                    <br>
+                                    Moss Farm Leisure Complex,
+                                    <br>
+                                    Northwich, Cheshire, CW8 4BG
+                                </address>
+                            </div>
+                            <div class="col-md-4" id="socials">
+                                <a href="https://www.instagram.com"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="Visit our Instagram page (opens in a new tab)"><i
+                                        class="fa-brands fa-instagram instagram-icon"></i></a>
+                                <a href="https://www.facebook.com"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="Visit our Facebook page (opens in a new tab)"><i
+                                        class="fa-brands fa-square-facebook facebook-icon"></i></a>
+                                <a href="https://www.twitter.com"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="Visit our Twitter feed (opens in a new tab)"><i
+                                        class="fa-brands fa-x-twitter twitter-icon"></i></a>
+                            </div>
+                        </div>
+                    </footer>
 
-        <script src="app.js"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
+                    <script src="app.js"></script>
+                    <script
+                        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                        crossorigin="anonymous"></script>
 
-        <!--Font Awesome-->
-        <script src="https://kit.fontawesome.com/aa9af45995.js"
-            crossorigin="anonymous"></script>
-    </body>
-</html>
+                    <!--Font Awesome-->
+                    <script src="https://kit.fontawesome.com/aa9af45995.js"
+                        crossorigin="anonymous"></script>
+                </body>
+            </html>

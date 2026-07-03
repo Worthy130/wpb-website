@@ -132,14 +132,15 @@ section.active {
   text-align: center;
 }
 
-.available-courses, .available-assessments {
+.available-courses,
+.available-assessments {
   background: var(--primary-color);
   color: var(--secondary-color);
   font-size: 1.2rem;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  margin: 10px;
+  height: 100%;
 }
 
 /* juniors page */
@@ -150,6 +151,14 @@ section.active {
   border-radius: 10px;
   margin-top: 50px;
   text-align: center;
+}
+.available-courses button,
+.available-assessments button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 10px;
+  cursor: pointer;
 }
 
 footer {
