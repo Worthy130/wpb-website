@@ -1,174 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Metamorphous&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&display=swap');
 
 body {
-  font-family: Metamorphous, Tinos, serif;
+  font-family: Manrope, serif;
   margin: 0;
-  background: #f5f5f5;
+  background: var(--bg);
 }
 
 :root {
-  --primary-color: #239344;
-  --secondary-color: #fede39;
-  --tertiary-color: #fff;
+  --bg: #07140E;
+  --surface: #102016;
+
+  --primary: #254F36;
+  --accent: #D2A347;
+
+  --text: #F4F2EC;
+  --text-muted: #C9C6BD;
+
+  --border: RGB(225,225,225,.08);
 }
 
-header {
-  background: var(--primary-color);
-  margin: 20px;
-  margin-top: 50px;
-  padding: 10px;
-  height: 100px;
+.hero {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 10px;
-/* position: sticky;
-  top: 0;
-  z-index: 1000; */
+  font-size: 1.50rem;
+  margin: 20px;
+  background-image: url('../assets/images/hero.avif');
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  height: 450px;
+  width: 98%;
+  border-radius: 18px;
+}
+
+.hero h1 {
+  position: relative;
+  font-size: 4rem;
+  color: var(--text);
+  margin: 5px;
+  left: 50px;
+  top: 90px;
 }
 
 #wpb-logo {
   position: relative;
-  width: 200px;
+  width: 400px;
   right: 15px;
-  border-radius: 10px;
+  border-radius: 18px;
   padding: 5px
 }
 
-header h1 {
-  position: relative;
-  font-size: 3rem;
-  color: var(--secondary-color);
-  margin: 5px;
-  right: 250px;
-}
-
-.navbar .nav-link {
-  background: transparent;
-  font-family: inherit;
-  font-size: 1.5rem;
-  color: var(--secondary-color);
-  margin-left: 10px;
-  padding: 8px 12px;
-  border: none;
-  cursor: pointer;
-}
-
-#hero-img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.hero-text {
-  font-size: 1.2rem;
-  margin-top: 20px;
+#welcome-message {
+  color:var(--text);
+  background-color: var(--bg);
   text-align: center;
+  padding: 10px;
+  border-radius: 18px;
+  margin: 20px;
 }
 
-section.active {
-  display: block;
+
+#navbar {
+  background: var(--primary);
+  height: 50px;
+  width: 30%;
+  color: var(--accent);
+  margin: 0 10px;
+  border-radius: 18px;
 }
 
-.home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.nav-link {
   justify-content: center;
-  background: var(--tertiary-color);
-  padding: 30px;
+  margin: 20px
 }
 
-.home-secondary {
+#home {
   background-image: url('../assets/images/hadfield1.avif');
-  background-color: rgba(255, 255, 255, 0.6);
-  background-blend-mode: lighten;
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
-  font-size: 1.2rem;
+  background-position: center;
   text-align: center;
-  margin-top: 20px;
-  padding: 30px;
-  border-radius: 10px;
+  border-radius: 18px;
+  margin: 20px;
 }
 
-
-#index-carousel #juniors-carousel {
-  margin-top: 30px;
-  width: 80%;
-  margin: auto;
+.home-content {
+  background: var(--surface);
+  color: var(--text);
+  opacity: 0.6;
+  border-radius: 18px;
 }
 
-/* Ensure all carousel images render at a consistent height */
-/* Make images fully visible (no cropping) while constraining height */
-.carousel-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 500px;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  display: block;
-  border-radius: 10px;-
-}
-
-.carousel-control-prev, .carousel-control-next {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-}
-
-/* joining page */
-#join {
-  background: var(--tertiary-color);
-  font-size: 1.2rem;
-  padding: 30px;
-  border-radius: 10px;
-  margin-top: 50px;
-  text-align: center;
-}
-
-.available-courses,
-.available-assessments {
-  background: var(--primary-color);
-  color: var(--secondary-color);
-  font-size: 1.2rem;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  height: 100%;
-}
-
-/* juniors page */
-#juniors {
-  background: var(--tertiary-color);
-  font-size: 1.2rem;
-  padding: 30px;
-  border-radius: 10px;
-  margin-top: 50px;
-  text-align: center;
-}
-.available-courses button,
-.available-assessments button {
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: 10px;
-  cursor: pointer;
-}
 
 footer {
-  background: var(--primary-color);
-  color: var(--secondary-color);
+  background: var(--primary);
+  color: var(--text);
   width: 100%;
   text-align: center;
   padding: 20px;
-  margin-top: 30px;
-  border-radius: 10px;
+  margin: 30px;
+  border-radius: 18px;
 }
 
 #pix-logo {
@@ -194,15 +123,4 @@ footer {
 .twitter-icon {
   font-size: 40px;
   color: var(--secondary-color);
-}
-/* Responsive Design */
-@media (max-width: 900px) {
-  #carousel { width: 100%; }
-  .carousel-item img { max-height: 240px; }
-}
-
-@media (max-width: 600px) {
-  .cards, .auth-container {
-    flex-direction: column;
-  }
 }
