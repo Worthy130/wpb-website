@@ -58,7 +58,6 @@
                     </li>
 
                 </ul>
-
             </div>
 
         </nav>
@@ -68,100 +67,13 @@
             <h1>Winnington Park Bowmen</h1>
 
             <p class="hero-subtitle">
-                One of Cheshire's longest established archery clubs,
-                welcoming beginners and experienced archers alike.
+                The evil elf lord is working his gremlins overtime to finish this page!
+                Check back soon to see the finished page. In the meantime, you can still navigate to other pages on the site using the menu above.
             </p>
-
-            <div class="hero-buttons">
-
-                <a href="join.html" class="btn btn-outline-light">
-                    Learn to Shoot
-                </a>
-
-                <a href="#home" class="btn btn-outline-light">
-                    Learn More
-                </a>
-
-            </div>
-
         </div>
-
     </div>
 
 </header>
-    <section id="home">
-      <div class="container home-content py-5">
-        <h2>About Winnington Park Bowmen</h2>
-
-        <p>
-          Winnington Park Bowmen was formed in Northwich, Cheshire, on 26 July
-          1957.
-        </p>
-
-        <p>
-          We're a friendly and inclusive club with two shooting venues:
-        </p>
-
-        <ul>
-          <li>20-yard indoor range at Winnington Park Recreation Club</li>
-          <li>100-yard (90 metre) outdoor range at Moss Farm Leisure
-            Complex</li>
-        </ul>
-
-        <p>
-          Our members shoot recurve, compound and longbow and regularly compete
-          in target,
-          field and clout archery throughout the UK.
-        </p>
-        <h2>How to join</h2>
-        <p>To join Winnington Park Bowmen, you'll first need to complete one
-          of our beginners' courses. Once you have completed this course you
-          will be invited to
-          join us as a member should you wish to do so. Our beginners' courses
-          are very popular, so there may occasionally be a waiting list. We'll
-          always aim to get you onto the next available course. Please check the
-          joining page for more
-          information.
-
-          If you have already completed a course elsewhere we will meet you
-          for
-          an assessment to ensure you can shoot safely before joining.
-        </p>
-        <h2>What's the minimum age?</h2>
-
-        <p>
-          Our beginners' courses are generally suitable for people aged 14 and
-          over.
-        </p>
-
-        <p>
-          In some circumstances we may accept younger archers if we feel they
-          are able to follow instructions and shoot safely.
-        </p>
-
-        <p>
-          Children under 18 must always be accompanied by a parent or
-          guardian.
-        </p>
-
-        <p>
-          Younger children can usually start with our Juniorlings sessions
-          before progressing to full junior membership.
-        </p>
-        <p>
-          Short blocks of junior sessions are also available for younger
-          archers. Regular attendance at these "juniorling" sessions will
-          preprare young learners to become junior members once they have
-          reached certain level of proficiency. Please see the Juniorlings
-          page
-          for more information.</p>
-        <div class="mt-5 text-center">
-          <a href="join.html" class="btn learn-btn btn-lg">
-            Learn to Shoot
-          </a>
-        </div>
-      </div>
-    </section>
 
     <footer id="contact">
       <div class="container">

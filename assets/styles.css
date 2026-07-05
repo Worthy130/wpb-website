@@ -1,126 +1,563 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&display=swap');
+/* ===========================
+   Google Fonts
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
 
-body {
-  font-family: Manrope, serif;
-  margin: 0;
-  background: var(--bg);
+/* ===========================
+   Colour Palette
+=========================== */
+
+:root{
+
+    --bg:#07140E;
+    --surface:#102016;
+    --surface-light:#183123;
+
+    --primary:#245338;
+    --accent:#D2A347;
+
+    --text:#F5F5F2;
+    --text-muted:#C9C6BD;
+
+    --shadow:0 20px 50px rgba(0,0,0,.45);
+
 }
 
-:root {
-  --bg: #07140E;
-  --surface: #102016;
+/* ===========================
+   Global
+=========================== */
 
-  --primary: #254F36;
-  --accent: #D2A347;
-
-  --text: #F4F2EC;
-  --text-muted: #C9C6BD;
-
-  --border: RGB(225,225,225,.08);
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Manrope',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.8;
+
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,h2,h3{
+
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    letter-spacing:1px;
+
+}
+
+h2{
+
+    margin-bottom:20px;
+    color:var(--accent);
+
+}
+
+p{
+
+    color:var(--text-muted);
+    margin-bottom:1.5rem;
+
+}
+
+section{
+
+    margin:30px auto;
+
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: .3s;
+}
+
+a:hover {
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.hero,
+#welcome-message,
+.home-content,
+footer {
+
+    border: 1px solid rgba(255,255,255,.08);
+
+}
+
+/* ===========================
+   Hero
+=========================== */
 
 .hero {
-  display: flex;
-  font-size: 1.50rem;
-  margin: 20px;
-  background-image: url('../assets/images/hero.avif');
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 10px;
-  height: 450px;
-  width: 98%;
-  border-radius: 18px;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(rgba(7,20,14,.65),
+        rgba(7,20,14,.65)),
+        url("../assets/images/hero.avif");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 20px;
+
+    margin: 20px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
 }
 
-.hero h1 {
-  position: relative;
-  font-size: 4rem;
-  color: var(--text);
-  margin: 5px;
-  left: 50px;
-  top: 90px;
+/* Dark overlay */
+
+.hero-overlay {
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+
+    padding: 2rem 4rem;
+
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+.navbar {
+
+    padding: 1rem 0;
+
 }
 
 #wpb-logo {
-  position: relative;
-  width: 400px;
-  right: 15px;
-  border-radius: 18px;
-  padding: 5px
+
+    width: 140px;
+    height: auto;
+
 }
 
-#welcome-message {
-  color:var(--text);
-  background-color: var(--bg);
-  text-align: center;
-  padding: 10px;
-  border-radius: 18px;
-  margin: 20px;
-}
+.navbar-nav {
 
+    gap: 1rem;
 
-#navbar {
-  background: var(--primary);
-  height: 50px;
-  width: 30%;
-  color: var(--accent);
-  margin: 0 10px;
-  border-radius: 18px;
 }
 
 .nav-link {
-  justify-content: center;
-  margin: 20px
+
+    color: white !important;
+
+    font-weight: 600;
+
+    transition: .3s;
+
 }
 
-#home {
-  background-image: url('../assets/images/hadfield1.avif');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  border-radius: 18px;
-  margin: 20px;
+.nav-link:hover {
+
+    color: var(--accent) !important;
+
 }
 
-.home-content {
-  background: var(--surface);
-  color: var(--text);
-  opacity: 0.6;
-  border-radius: 18px;
+/* ===========================
+   Hero Content
+=========================== */
+
+.hero-content {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+.hero h1 {
+
+    font-size: clamp(3rem,7vw,5.5rem);
+
+    color: white;
+
+    margin-bottom: 1rem;
+
+}
+
+.hero-subtitle {
+
+    font-size: 1.3rem;
+
+    color: white;
+
+    max-width: 700px;
+
+    margin-bottom: 2.5rem;
+
+}
+
+/* ===========================
+   Hero Buttons
+=========================== */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 1rem;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+}
+
+.learn-btn {
+
+    background: var(--accent);
+
+    color: #111;
+
+    padding: 15px 40px;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+}
+
+.learn-btn:hover {
+
+    background: #e5bb5d;
+
+    transform: translateY(-3px);
+
+}
+
+.btn-outline-light {
+
+    border-radius: 50px;
+
+    padding: 15px 40px;
+
+}
+/* ===========================
+   Logo
+=========================== */
+
+#wpb-logo{
+
+    width:220px;
+    height:auto;
+
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+.navbar {
+    background: rgba(16, 32, 22, 0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    padding: 10px 20px;
+}
+
+.nav-link{
+
+    color:white !important;
+
+    font-weight:600;
+
+    margin:0 .6rem;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:var(--accent)!important;
+
 }
 
 
-footer {
-  background: var(--primary);
-  color: var(--text);
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-  margin: 30px;
-  border-radius: 18px;
+/* ===========================
+   Main Content
+=========================== */
+
+#home{
+
+    margin:30px 20px;
+
+    padding:60px;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(rgba(7,20,14,.55),
+    rgba(7,20,14,.55)),
+    url("../assets/images/hadfield1.avif");
+
+    background-size:cover;
+
+    background-position:center;
+
+    box-shadow:var(--shadow);
+
 }
 
-#pix-logo {
-  width: 40px;
-  padding: 5px;
-}
-#socials {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.home-content{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    background:rgba(16,32,22,.88);
+
+    padding:50px;
+
+    border-radius:20px;
+
 }
 
+.home-content h2{
 
-.instagram-icon {
-  font-size: 40px;
-  color: var(--secondary-color);
+    font-size:2.5rem;
+
+    color:var(--text);
+
+    margin-bottom:20px;
+
 }
-.facebook-icon {
-  font-size: 40px;
-  color: var(--secondary-color);
-  margin: 0 20px;
+
+.home-content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
 }
-.twitter-icon {
-  font-size: 40px;
-  color: var(--secondary-color);
+
+.home-content li {
+    padding-bottom: .5rem;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.learn-btn,
+.btn {
+
+    background:var(--accent);
+
+    color:#111;
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:14px 35px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+button:hover,
+.btn:hover{
+
+    background:#e0b760;
+
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+    margin:20px;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    background:var(--primary);
+
+    box-shadow:var(--shadow);
+
+}
+
+footer p,
+footer address{
+
+    color:white;
+
+}
+
+footer .row {
+    align-items: center;
+}
+
+#pix-logo{
+
+    width:42px;
+
+}
+
+/* ===========================
+   Social Icons
+=========================== */
+
+#socials{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.instagram-icon,
+.facebook-icon,
+.twitter-icon{
+
+    color:var(--accent);
+
+    font-size:2.2rem;
+
+    transition:.3s;
+
+}
+
+.instagram-icon:hover,
+.facebook-icon:hover,
+.twitter-icon:hover{
+
+    color:white;
+
+    transform:translateY(-5px);
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:992px){
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+.hero h1{
+
+    margin:30px 0;
+
+    font-size:3rem;
+
+}
+
+#navbar{
+
+    margin-top:25px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.hero{
+
+    min-height:auto;
+
+}
+
+.hero h1{
+
+    font-size:2.3rem;
+
+}
+
+#wpb-logo{
+
+    width:170px;
+
+}
+
+#welcome-message{
+
+    padding:30px 20px;
+
+}
+
+#welcome-message h2{
+
+    font-size:2.2rem;
+
+}
+
+#home{
+
+    padding:20px;
+
+}
+
+.home-content{
+
+    padding:30px;
+
+}
+
+footer{
+
+    text-align:center;
+
+}
+
 }
