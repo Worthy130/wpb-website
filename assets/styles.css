@@ -276,6 +276,12 @@ footer {
 
 }
 
+.nav-link.active{
+
+    color:var(--accent)!important;
+
+}
+
 .nav-link:hover{
 
     color:var(--accent)!important;
@@ -369,6 +375,179 @@ button:hover,
 
     background:#e0b760;
 
+
+}
+
+/* ===========================
+   Inner Page Header
+=========================== */
+
+.page-header {
+
+    min-height: 320px;
+
+    margin: 20px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(7,20,14,.70),
+        rgba(7,20,14,.70)),
+        url("../assets/images/hero.avif") center/cover no-repeat;
+
+    box-shadow: var(--shadow);
+
+}
+
+.page-header-overlay {
+
+    min-height: 320px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 1rem 2rem;
+
+}
+
+.page-header-overlay #wpb-logo {
+
+    width:150px;
+}
+
+.page-header-overlay .nav-link.active {
+
+    color:var(--accent)!important;
+
+}
+
+.nav-link.active::after{
+
+    width:100%;
+
+}
+
+.page-title{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    margin-top:3rem;
+
+    text-align:center;
+
+}
+
+.page-title h1 {
+
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+
+    color: white;
+
+    margin-bottom: 1rem;
+
+}
+
+.page-title p {
+
+    font-size: 1.25rem;
+
+    color: var(--text);
+
+    max-width: 700px;
+
+}
+
+/* ===========================
+   Join Page Content
+=========================== */
+
+#equipment {
+
+    margin: 30px 20px;
+
+    padding: 60px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(rgba(7,20,14,.55),
+        rgba(7,20,14,.55)),
+        url("../assets/images/equipment.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    box-shadow: var(--shadow);
+
+}
+
+#prices {
+
+    margin: 30px 20px;
+
+    padding: 60px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(rgba(7,20,14,.55),
+        rgba(7,20,14,.55)),
+        url("../assets/images/arrows-close2.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    box-shadow: var(--shadow);
+
+}
+
+#available-courses {
+
+    margin: 30px 20px;
+
+    padding: 60px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(rgba(7,20,14,.55),
+        rgba(7,20,14,.55)),
+        url("../assets/images/indoor-champs.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    box-shadow: var(--shadow);
+
+}
+
+#available-assessments {
+
+    margin: 30px 20px;
+
+    padding: 60px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(rgba(7,20,14,.55),
+        rgba(7,20,14,.55)),
+        url("../assets/images/outdoor2.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    box-shadow: var(--shadow);
 
 }
 
