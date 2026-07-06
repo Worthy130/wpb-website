@@ -552,6 +552,31 @@ button:hover,
 }
 
 /* ===========================
+   Juniors Page Content
+=========================== */
+
+#juniors {
+
+    margin: 30px 20px;
+
+    padding: 60px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(rgba(7,20,14,.55),
+        rgba(7,20,14,.55)),
+        url("../assets/images/junior-collage.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    box-shadow: var(--shadow);
+
+}
+
+/* ===========================
    Footer
 =========================== */
 

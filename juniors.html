@@ -2,110 +2,143 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description"
+            content="Winnington Park Bowmen is a friendly archery club in Northwich, Cheshire, welcoming beginners and experienced archers alike.">
         <title>Winnington Park Bowmen</title>
-        <link rel="stylesheet" href="assets/styles.css">
+
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
             crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/styles.css">
     </head>
     <body>
 
-        <header>
-            <img id="wpb-logo" src="assets/images/WPB LOGO 300px 2026.png"
-                alt="Winnington Park Bowmen Logo">
-            <h1>Winnington Park Bowmen</h1>
-            <nav id="navbar" class="navbar navbar-expand">
-                <a class="nav-link" href="index.html">Home</a>
-                <a class="nav-link" href="join.html">Joining</a>
-                <a class="nav-link" href="juniors.html">Juniors</a>
-                <a class="nav-link" href="members-area.html">Members Area</a>
-            </nav>
+        <header class="page-header">
+
+            <div class="page-header-overlay">
+
+                <nav class="navbar navbar-expand-lg">
+
+                    <a class="navbar-brand" href="index.html">
+                        <img id="wpb-logo"
+                            src="assets/images/WPB LOGO 300px 2026.png"
+                            alt="Winnington Park Bowmen Logo">
+                    </a>
+
+                    <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNav"
+                        aria-controls="mainNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                        <span class="navbar-toggler-icon"></span>
+
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end"
+                        id="mainNav">
+
+                        <ul class="navbar-nav">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="join.html"
+                                    aria-current="page">Join</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active"
+                                    href="/juniors.html">Juniors</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="/secondary-pages/in-working-progress.html">Members Area</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </nav>
+
+                <div class="page-title">
+
+                    <h1>Join Winnington Park Bowmen</h1>
+
+                    <p>
+                        Our junior members are the future of our archery club.
+                    </p>
+
+                </div>
+
+            </div>
+
         </header>
 
-        <!-- JOIN -->
-        <div id="juniors" class="active">
-            <div class="juniors-info">
+        <!-- Juniors -->
+         <section id="juniors">
+            <div id="juniors-info">
                 <h2>About our junior members.</h2>
-                <p> Placeholder content about our junior members.
-
-                    We are now running regular junior archery coaching sessions
+                <p> We are now running regular junior archery coaching sessions
                     for youngsters aged 7 to 13 looking to get into the sport.
-                    Much more than a 'have-a-go' session at a holiday park or
+                </p>
+                <p> Much more in-depth than a 'have-a-go' session at a holiday park or
                     school residential, you'll learn from experienced archers
                     and coaches how to shoot safely and improve your technique.
-                    These short sessions are filled with fun and games. A parent
-                    or guardian should stay to supervise all juniors. ​The
-                    sessions run as short blocks, usually of 4 weeks, which must
-                    be booked and paid for in advance.
                 </p>
+                <p>These short sessions are filled with fun and games. A parent
+                    or guardian should stay to supervise all juniors. ​The
+                    sessions run as short blocks, usually of 4 weeks.</p>
             </div>
-            <div id="juniors-carousel" class="carousel slide"
-                data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row g-2">
-                            <div class="col-6">
-                                <img
-                                    src="assets/images/amelia-cheshire-compound-under-12-champ.jpg"
-                                    class="w-100"
-                                    alt="Amelia Hadfield, a junior member of Winnington Park Bowmen, winning in the Cheshire Compound Under 12 Championship">
-                            </div>
-                            <div class="col-6">
-                                <img src="assets/images/amelia2.jpg"
-                                    class="w-100"
-                                    alt="Amelia Hadfield, a junior member of Winnington Park Bowmen, practicing her shots">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row g-2">
-                            <div class="col-6">
-                                <img src="assets/images/william2.jpg"
-                                    class="w-100"
-                                    alt="William Worthington, a junior member of Winnington Park Bowmen, practicing his shots">
-                            </div>
-                            <div class="col-6">
-                                <img src="assets/images/william5.jpg"
-                                    class="w-100"
-                                    alt="William Worthington, a junior member of Winnington Park Bowmen, practicing his shots">
-                            </div>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="juniors-courses">
-                    <h2>Next block of Juniors sessions</h2>
-                    <p>Join our upcoming Junior sessions and
-                        develop your archery skills in a fun and
-                        supportive environment.</p>
-                    <button onclick="showSection('join')"
-                        class="primary">Lets have a look!</button>
-                </div>
+            <div id="juniors-schedule">
+                <h2>Junior Coaching Schedule</h2>
+                <p>Our junior coaching sessions are held on a regular basis. Please
+                    check our schedule below for the next available sessions.</p>
+                <ul>
+                    <li>Session 1: 10th July - 31st July</li>
+                    <li>Session 2: 7th August - 28th August</li>
+                    <li>Session 3: 4th September - 25th September</li>
+                </ul>
 
             </div>
 
-            <footer id="contact">
+            <div class="juniors-contact">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or would like to register your child for
+                    our junior coaching sessions, please contact us at
+                    <a href="mailto:info@wpbowmen.org">info@wpbowmen.org</a>.</p>
+
+        </section>
+        <footer id="contact">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-4" id="copyright">
                         <p><a href="https://www.pixelio.co.uk"
                                 target="_blank"
-                                rel="noopener"
+                                rel="noopener noreferrer"
                                 aria-label="Visit our website (opens in a new tab)"><img
                                     src="assets/images/Pixelio-blue-logo.png"
                                     alt="Go to pixelio website"
                                     class="img-fluid"
-                                    id="pix-logo"></a>&copy; 2026
-                            Pixelio. All
-                            rights
+                                    id="pix-logo"></a>&copy; 2026 Pixelio.
+                            All rights
                             reserved.</p>
                     </div>
                     <div class="col-md-4" id="contact-info">
                         <address>
-                            <strong><i
-                                    class="fa-solid fa-location-dot"></i>
-                                Winnington Park
+                            <strong><i class="fa-solid fa-location-dot"></i>
+                                Winnington
+                                Park
                                 Bowmen</strong>
                             <br>
                             Moss Farm Leisure Complex,
@@ -114,24 +147,24 @@
                         </address>
                     </div>
                     <div class="col-md-4" id="socials">
-                        <a href="https://www.instagram.com"
-                            target="_blank"
-                            rel="noopener"
+                        <a href="https://www.instagram.com" target="_blank"
+                            rel="noopener noreferrer"
                             aria-label="Visit our Instagram page (opens in a new tab)"><i
                                 class="fa-brands fa-instagram instagram-icon"></i></a>
-                        <a href="https://www.facebook.com"
+                        <a
+                            href="https://www.facebook.com/wpbowmen?locale=en_GB"
                             target="_blank"
-                            rel="noopener"
+                            rel="noopener noreferrer"
                             aria-label="Visit our Facebook page (opens in a new tab)"><i
                                 class="fa-brands fa-square-facebook facebook-icon"></i></a>
-                        <a href="https://www.twitter.com"
-                            target="_blank"
+                        <a href="https://www.twitter.com" target="_blank"
                             rel="noopener"
                             aria-label="Visit our Twitter feed (opens in a new tab)"><i
                                 class="fa-brands fa-x-twitter twitter-icon"></i></a>
                     </div>
                 </div>
-            </footer>
+            </div>
+        </footer>
 
             <script src="app.js"></script>
             <script
