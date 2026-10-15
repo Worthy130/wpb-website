@@ -6,6 +6,15 @@
 .site-nav #wpb-logo { width: 76px; margin: 0; border-radius: 12px; }
 .site-nav .navbar-nav { gap: 8px; }
 .site-nav .nav-link { padding: .6rem .95rem; font-size: 1.08rem; font-weight: 700; }
+.site-nav .navbar-toggler {
+  padding: .55rem .65rem;
+  border: 2px solid #fff;
+  border-radius: 9px;
+  background: rgba(0, 0, 0, .28);
+  box-shadow: 0 0 0 3px rgba(210, 163, 71, .22);
+}
+.site-nav .navbar-toggler:focus { box-shadow: 0 0 0 4px rgba(210, 163, 71, .55); }
+.site-nav .navbar-toggler-icon { filter: brightness(0) invert(1); }
 
 .club-story {
   display: grid;
@@ -186,4 +195,5 @@ footer#contact .pixelio-copyright img {
   .site-nav { min-height: 72px; padding: 8px 14px; }
   .site-nav #wpb-logo { width: 56px; }
   .site-nav .nav-link { font-size: 1rem; }
+  .site-nav .navbar-toggler { padding: .5rem .6rem; }
 }
