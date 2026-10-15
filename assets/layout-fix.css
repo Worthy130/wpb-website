@@ -123,9 +123,56 @@ footer#contact .pixelio-copyright img {
   object-fit: contain;
 }
 
+/* Keep the Juniorlings gallery unique: use different club photos on content cards. */
+.pathway-card:nth-child(2) {
+  background-image: linear-gradient(rgba(20,51,35,.9), rgba(20,51,35,.82)), url('../assets/images/junior-collage.png') !important;
+}
+
+.junior-details article:nth-child(1) {
+  background-image: linear-gradient(rgba(12,31,20,.87), rgba(12,31,20,.87)), url('../assets/images/amelia-cheshire-compound-under-12-champ.jpg') !important;
+}
+
+.junior-details article:nth-child(2) {
+  background-image: linear-gradient(rgba(12,31,20,.87), rgba(12,31,20,.87)), url('../assets/images/amelia2.jpg') !important;
+}
+
+.junior-details article:nth-child(3) {
+  background-image: linear-gradient(rgba(12,31,20,.87), rgba(12,31,20,.87)), url('../assets/images/bray.jpg') !important;
+}
+
+.contact-panel {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: clamp(32px, 6vw, 88px);
+  align-items: start;
+  margin-top: 76px;
+  padding: clamp(30px, 5vw, 58px);
+  border: 1px solid rgba(210,163,71,.35);
+  border-radius: 18px;
+  background: #143323;
+}
+
+.contact-panel h2 { margin: 0 0 14px; color: #fff; font-size: clamp(2.25rem, 4vw, 3.7rem); }
+.contact-panel p { color: #e3e7e3; line-height: 1.7; }
+.contact-panel-address a { color: #dcb04d; font-weight: 800; }
+.contact-form { display: grid; gap: 9px; }
+.contact-form label { color: #fff; font-size: .88rem; font-weight: 800; }
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 8px;
+  color: #12241a;
+  background: #fff;
+}
+.contact-form textarea { resize: vertical; }
+.contact-form .learn-btn { justify-self: start; margin-top: 8px; }
+.contact-form-note { margin: 4px 0 0; color: #cbd5ce; font-size: .82rem; }
+
 @media (max-width: 900px) {
   .club-story { grid-template-columns: 1fr; gap: 28px; margin-top: 52px; padding: 42px 24px; }
   .club-story-image img { height: 260px; }
+  .contact-panel { grid-template-columns: 1fr; }
   .club-gallery, .junior-gallery { grid-template-columns: 1fr !important; width: calc(100% - 32px); }
   .club-gallery img, .junior-gallery img { height: 220px !important; }
   .fees-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
