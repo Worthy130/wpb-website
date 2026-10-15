@@ -2,7 +2,10 @@
 
 .site-hero { min-height: 650px; }
 .site-hero .hero-overlay { min-height: 620px; }
-.site-nav #wpb-logo { width: 88px; margin: 0; border-radius: 14px; }
+.site-nav { min-height: 88px; padding: 9px 24px; }
+.site-nav #wpb-logo { width: 76px; margin: 0; border-radius: 12px; }
+.site-nav .navbar-nav { gap: 8px; }
+.site-nav .nav-link { padding: .6rem .95rem; font-size: 1.08rem; font-weight: 700; }
 
 .club-gallery {
   display: grid !important;
@@ -105,4 +108,10 @@ footer#contact .pixelio-copyright img {
   footer#contact .footer-grid,
   footer#contact > .container .row { grid-template-columns: 1fr !important; gap: 22px !important; }
   footer#contact .text-md-end { text-align: left !important; }
+}
+
+@media (max-width: 768px) {
+  .site-nav { min-height: 72px; padding: 8px 14px; }
+  .site-nav #wpb-logo { width: 56px; }
+  .site-nav .nav-link { font-size: 1rem; }
 }
