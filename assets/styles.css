@@ -844,6 +844,86 @@ footer .row {
 .pixelio-copyright { display: flex; align-items: center; justify-content: center; gap: 10px; max-width: 1200px; margin: 28px auto 0; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.16); color: white; font-size: .8rem; }
 .pixelio-copyright img { width: 42px; }
 
+/* Shared layout rhythm: overrides earlier page-specific spacing. */
+.site-hero,
+.page-header {
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.site-hero .hero-overlay,
+.page-header .page-header-overlay {
+    min-height: 0;
+    padding: 24px 34px 0;
+}
+
+.site-hero .hero-overlay { min-height: 720px; }
+.page-header .page-header-overlay { min-height: 440px; }
+
+.site-nav {
+    min-height: 108px;
+    padding: 10px 22px;
+    border-radius: 18px;
+}
+
+.site-nav #wpb-logo {
+    width: 88px;
+    margin: 0;
+    border-radius: 14px;
+}
+
+.site-nav .nav-link {
+    margin: 0 .1rem;
+    padding: .55rem .85rem;
+    font-size: 1rem;
+}
+
+.site-hero .hero-content-left {
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 80px 8% 76px;
+}
+
+.site-hero .hero-content-left h1 { max-width: 760px; }
+
+.page-header .page-title {
+    flex: 1;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin: 0;
+    padding: 64px 8% 72px;
+    text-align: left;
+}
+
+.page-header .page-title p { margin-bottom: 0; }
+.page-header .page-title .eyebrow-site { margin-bottom: 14px; }
+
+.intro-section { margin-top: 0; }
+.detail-grid-site { margin-top: 0; }
+.membership-fees { margin-bottom: 0; }
+.cta-band { margin-top: 72px; margin-bottom: 72px; }
+.assessment-callout { margin-top: 0; margin-bottom: 70px; }
+
+@media (max-width: 768px) {
+    .site-hero,
+    .page-header { margin: 10px; border-radius: 14px; }
+    .site-hero .hero-overlay,
+    .page-header .page-header-overlay { padding: 14px 16px 0; }
+    .site-hero .hero-overlay { min-height: 620px; }
+    .page-header .page-header-overlay { min-height: 390px; }
+    .site-nav { min-height: 78px; padding: 8px 14px; }
+    .site-nav #wpb-logo { width: 58px; border-radius: 10px; }
+    .site-nav .nav-link { padding: .55rem; font-size: .95rem; }
+    .site-hero .hero-content-left,
+    .page-header .page-title { align-items: center; padding: 56px 10% 52px; text-align: center; }
+    .hero-content-left .hero-subtitle { margin-left: auto; margin-right: auto; }
+    .intro-section { padding: 58px 24px 38px; }
+    .detail-grid-site { padding: 0 24px; }
+    .membership-fees { padding: 38px 24px; }
+    .cta-band { margin: 52px 16px; padding: 36px 26px; }
+    .assessment-callout { padding: 58px 24px; }
+}
+
 @media (max-width: 900px) {
   .split-heading, .venue-section, .footer-grid { grid-template-columns: 1fr; gap: 25px; }
   .pathway-grid, .detail-grid-site { grid-template-columns: 1fr; }
