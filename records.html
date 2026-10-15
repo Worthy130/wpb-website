@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Current club records for Winnington Park Bowmen, supplied by Golden Records.">
+    <title>Club Records | Winnington Park Bowmen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles.css?v=25e6a29">
+    <link rel="stylesheet" href="assets/layout-fix.css?v=5">
+  </head>
+  <body>
+    <header class="page-header booking-header">
+      <div class="page-header-overlay">
+        <nav class="navbar navbar-expand-lg site-nav">
+          <a class="navbar-brand" href="index.html"><img id="wpb-logo" src="assets/images/WPB LOGO 300px 2026.png" alt="Winnington Park Bowmen"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse justify-content-end" id="mainNav"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="join.html">Learn</a></li><li class="nav-item"><a class="nav-link" href="juniors.html">Juniors</a></li><li class="nav-item"><a class="nav-link" href="book.html">Book</a></li><li class="nav-item"><a class="nav-link active" href="records.html" aria-current="page">Records</a></li></ul></div>
+        </nav>
+        <div class="page-title"><p class="eyebrow-site">WINNINGTON PARK BOWMEN</p><h1>Club records.</h1><p>Celebrating the best scores achieved by our archers.</p></div>
+      </div>
+    </header>
+    <main>
+      <section class="container records-intro"><div class="split-heading"><div><p class="section-kicker">LIVE CLUB RECORDS</p><h2>Every score tells a story.</h2></div><p>These records are supplied directly by Golden Records. Use the filters to find a round, bow style or age group.</p></div></section>
+      <section class="container records-panel" aria-labelledby="records-results-title">
+        <h2 class="visually-hidden" id="records-results-title">Club record results</h2>
+        <div class="records-controls"><label>Search records<input id="records-search" type="search" placeholder="Name or round"></label><label>Bow style<select id="records-bow"><option value="">All bow styles</option></select></label><label>Age group<select id="records-age"><option value="">All age groups</option></select></label><label>Round<select id="records-round"><option value="">All rounds</option></select></label></div>
+        <div class="records-meta"><span id="records-count">Loading club records…</span><span id="records-updated"></span></div>
+        <div class="records-table-wrap"><table class="records-table"><thead><tr><th>Round</th><th>Bow style</th><th>Age group</th><th>Record holder</th><th>Score</th><th>Shot</th><th>Hits / Golds</th></tr></thead><tbody id="records-body"></tbody></table><p id="records-message" class="records-empty" hidden></p></div>
+      </section>
+    </main>
+    <footer id="contact"><div class="container footer-grid"><div><strong>Winnington Park Bowmen</strong><p>Moss Farm Leisure Complex<br>Northwich, Cheshire, CW8 4BG</p></div><div><p class="section-kicker">CLUB ACCESS</p><a href="https://new-membership.wpbowmen.co.uk/">Staff Admin sign in</a><a href="book.html">Book archery</a><a href="index.html#contact-us">Contact us</a></div><div><p class="section-kicker">FOLLOW</p><a href="https://www.facebook.com/wpbowmen?locale=en_GB" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></div></div><div class="pixelio-copyright"><a href="https://www.pixelio.co.uk" target="_blank" rel="noopener noreferrer"><img src="assets/images/Pixelio-blue-logo.png" alt="Pixelio"></a><span>© 2026 Pixelio. All rights reserved.</span></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+      const endpoint = 'https://new-membership.wpbowmen.co.uk/api/public/club-records';
+      const search = document.getElementById('records-search');
+      const bow = document.getElementById('records-bow');
+      const age = document.getElementById('records-age');
+      const round = document.getElementById('records-round');
+      const body = document.getElementById('records-body');
+      const count = document.getElementById('records-count');
+      const updated = document.getElementById('records-updated');
+      const message = document.getElementById('records-message');
+      let records = [];
+
+      function formatDate(value) {
+        if (!value) return '—';
+        return new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(value));
+      }
+
+      function addOptions(select, values) {
+        [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b)).forEach(value => {
+          const option = document.createElement('option');
+          option.value = value;
+          option.textContent = value;
+          select.append(option);
+        });
+      }
+
+      function cell(row, text, className) {
+        const element = document.createElement('td');
+        element.textContent = text || '—';
+        if (className) element.className = className;
+        row.append(element);
+      }
+
+      function render() {
+        const query = search.value.trim().toLocaleLowerCase();
+        const visible = records.filter(record => (!query || [record.name, record.round, record.bow_class, record.age_group].filter(Boolean).join(' ').toLocaleLowerCase().includes(query)) && (!bow.value || record.bow_class === bow.value) && (!age.value || record.age_group === age.value) && (!round.value || record.round === round.value));
+        body.replaceChildren();
+        visible.forEach(record => {
+          const row = document.createElement('tr');
+          cell(row, record.round);
+          cell(row, record.bow_class);
+          cell(row, record.age_group);
+          cell(row, record.name);
+          cell(row, record.score, 'records-score');
+          cell(row, formatDate(record.date_shot));
+          cell(row, `${record.hits ?? '—'} / ${record.golds ?? '—'}`);
+          body.append(row);
+        });
+        count.textContent = `${visible.length} ${visible.length === 1 ? 'record' : 'records'} shown`;
+        message.hidden = visible.length !== 0;
+        message.textContent = 'No club records match those filters.';
+      }
+
+      fetch(endpoint).then(response => {
+        if (!response.ok) throw new Error('Could not load club records');
+        return response.json();
+      }).then(data => {
+        records = Array.isArray(data.records) ? data.records : [];
+        addOptions(bow, records.map(record => record.bow_class));
+        addOptions(age, records.map(record => record.age_group));
+        addOptions(round, records.map(record => record.round));
+        updated.textContent = data.retrieved_at ? `Updated ${formatDate(data.retrieved_at)}` : '';
+        render();
+      }).catch(() => {
+        count.textContent = 'Club records are temporarily unavailable.';
+        message.textContent = 'Please try again shortly.';
+        message.classList.add('records-error');
+        message.hidden = false;
+      });
+      [search, bow, age, round].forEach(control => control.addEventListener('input', render));
+      [bow, age, round].forEach(control => control.addEventListener('change', render));
+    </script>
+  </body>
+</html>
